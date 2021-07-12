@@ -38,10 +38,9 @@ if('undefined' === typeof(bc_cf7_submission)){
 
         wpcf7reset: function(event){
             if(jQuery('#' + event.detail.unitTag).find('.bc-cf7-submission').length){
+                jQuery('#' + event.detail.unitTag).find('.bc-cf7-submission').removeClass('alert-info').addClass('alert-success').text(bc_cf7_submission.message);
                 if(bc_cf7_submission.redirect){
                     jQuery('#' + event.detail.unitTag).find('.bc-cf7-submission').append('<span class="ajax-loader float-right m-0 visible"></span>');
-                } else {
-                    jQuery('#' + event.detail.unitTag).find('.bc-cf7-submission').removeClass('alert-info').addClass('alert-success').text(bc_cf7_submission.message);
                 }
             }
         },
